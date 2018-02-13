@@ -12,7 +12,9 @@ export class RecipeListComponent implements OnInit {
     new Recipe('A test Recipe', 'this is a test', 'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg'),
     new Recipe('A test Recipe', 'this is a test', 'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg')
   ]
-
+  
+  
+  
 
   constructor() { }
 
