@@ -8,6 +8,10 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  
+  
+  
+
   recipes: Recipe[] = 
   [
     new Recipe('A test Recipe', 'this is a test', 'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg'),
@@ -15,10 +19,9 @@ export class RecipeListComponent implements OnInit {
   ]
   
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
-
   
-  onRecipeSelected(recipeEl: Recipe) {
-  
+  onRecipeSelected(recipe: Recipe) {
+    this.recipeWasSelected.emit(recipe);
 
   }
 
