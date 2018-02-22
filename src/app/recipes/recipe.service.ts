@@ -1,5 +1,6 @@
 import { Recipe } from "./recipe.model";
 import { EventEmitter } from "@angular/core";
+import { Ingredient } from "../shared/ingredient.model";
 
 export class RecipeService {
     
@@ -7,8 +8,25 @@ export class RecipeService {
 
     private recipes: Recipe[] = 
     [
-      new Recipe('A test Recipe', 'this is a test', 'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg'),
-      new Recipe('A test Recipe', 'this is a test', 'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg')
+      new Recipe(
+    'Schnitzel',
+    'A tasty schnitzel',
+    'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg',
+     [
+         new Ingredient('Meat', 1),
+         new Ingredient('French Fries', 21)
+     ]),
+
+     new Recipe(
+        'Burger',
+        'this is a test',
+        'http://goodtoknow.media.ipcdigital.co.uk/111/000016ef4/543a_orh412w625/Butter-chicken-recipe.jpg',
+         [
+             new Ingredient('buns', 2),
+             new Ingredient('Meat', 1),
+
+         ]),
+      
     ]
 
     getRecipes() {
